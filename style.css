@@ -1,0 +1,414 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: "Moderustic", sans-serif;  
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+header{
+   background: white; 
+   margin: auto;
+   width: 80%;
+   align-items: center;
+}
+label.logo{
+   font-size: 35px; 
+   color: rgb(233, 54, 54);
+   font-weight: 600;
+   line-height: 80px;
+ 
+}
+header ul{
+   float: right; 
+   margin-right: 20px;
+}
+header ul li {
+ display: inline-block;
+ line-height: 80px;  
+ margin: 0 10px; 
+
+ 
+}
+header ul li a{
+   color: #000; 
+   font-size: 17px;
+   font-weight: 500;
+
+ 
+}
+a.active, 
+a:hover{
+ background:rgb(233, 54, 54) ;
+ transition: .8s;
+ padding: 5px 8px;
+ border-radius: 8px; 
+}
+#moon{
+    
+    margin-right: 20px;
+    color: #000;
+   
+}
+.checkbtn{
+ font-size: 30px;  
+ color: #000; 
+ float: right;
+ line-height: 80px;
+ margin-right: 40px;
+ cursor: pointer;
+ display: none;
+}
+#check{
+  display: none;  
+}
+/* section home*/
+
+.home{
+    width: 80%;
+   
+    margin: auto;
+    padding: 3rem 0;
+    
+ display: grid;
+ grid-template-columns: repeat(2,1fr) ;
+ align-items: center;
+ 
+ gap: 2rem;
+   
+    
+}
+
+.home-img img{
+ width: 400px;
+ height: auto;
+ box-shadow: 5px 5px 14px rgba(0, 0, 0, .1);
+ animation: rotate 5s linear infinite;
+ border-radius: 50%;
+}
+
+.home-text h2,
+ .home-text h3{
+    font-size: 40px;
+    color: rgb(233, 54, 54) ;
+    font-weight: 700;
+
+}
+.home-text h3{
+    margin-bottom: 10px;
+}
+.home-text i{
+ color: #64b7b9;
+}
+.home-text p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.home-text .btn,
+.home-text .btn1{
+    padding: 15px 25px;
+    background:rgb(233, 54, 54) ;
+    color: #000;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition:  .5s ease;
+   
+   
+   
+}
+.home-text .btn:hover
+ ,.home-text .btn1:hover
+ {
+    color:rgb(233, 54, 54)  ;
+    background: #0c0b0b;
+}
+
+
+@keyframes rotate {
+    0%{
+     transform: rotate(0deg) ;
+    }
+    100%{
+     transform: rotate(360deg);
+    }
+}
+ .icons{
+    position: absolute;
+    bottom: 40px;
+  left: 30%;
+   
+   
+}
+.icons img{
+    width: 80px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.icons img:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:970px) {
+ lable.logo{
+    font-size: 25px;
+ }
+ header ul li a{
+  font-size: 14px;  
+ }
+ .home-img img{
+    width: 320px ;
+ }
+
+
+
+
+
+
+
+}
+@media (max-width:850px) {
+  .checkbtn{
+    display: block;
+  } 
+  ul{
+ 
+   position: fixed; 
+   width: 100%;
+   height: 100vh;
+   background: rgb(14, 11, 10);
+   top: 80px;
+   left: -100%;
+   text-align: center;
+   transition:  all .5s;
+   z-index: 1;
+  } 
+  header ul li{
+    display: block;
+  }
+  header ul li {
+    font-size: 20px;
+  }
+  header ul li a{
+    color: #fff;
+  }
+  a.active, 
+  a:hover{
+    background: none;
+    color: rgb(233, 54, 54) ;
+  }
+  #moon{
+    display: none;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  label.logo{
+  
+    padding: 0 50px;
+ }
+ .home-text h2,
+ .home-text h3{
+    font-size: 30px;
+    color: rgb(233, 54, 54) ;
+    font-weight: 700;
+
+}
+ .home-text .btn,
+.home-text .btn1{
+    padding: 15px 18px;
+    background:rgb(233, 54, 54) ;
+    color: #000;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition:  .5s ease;
+   
+   
+   
+}
+.icons img{
+    width: 90px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.home-img img{
+ width: 280px;
+}
+  
+.icons{
+    bottom: 50px;
+}
+
+
+}
+@media (max-width:760px){
+    .home{
+        grid-template-columns: 1fr;
+    }
+    .home-text{
+        text-align: center;
+    }
+    .home-img img{
+        margin-left: 180px;
+        width: 200px;
+        height: auto;
+        box-shadow: 5px 5px 14px rgba(0, 0, 0, .1);
+        animation: rotate 3s linear infinite;
+        border-radius: 50%;
+       }
+       .icons img{
+        width: 60px;
+        cursor: pointer;
+        transition: all .5s ease;
+      
+       
+       
+    }
+    section .icons{
+        position: absolute;
+        bottom: 50px;
+        margin-left: 130px;
+       
+       
+    }
+   
+ 
+    
+    
+}
+@media(max-width:630px){
+    .home-img img{
+      
+        margin-left: 130px;
+        height: auto;
+        box-shadow: 5px 5px 14px rgba(0, 0, 0, .1);
+        animation: rotate 3s linear infinite;
+        border-radius: 50%;
+       }
+       .icons img{
+        width: 60px;
+        cursor: pointer;
+        transition: all .5s ease;
+    }
+    section .icons{
+        position: absolute;
+        bottom: 50px;
+        margin-left: 130px;
+       
+    }  
+   
+
+}
+@media(max-width:470px){
+    .home-img img{
+    margin-top: 4rem;
+        margin-left: 60px;
+        height: auto;
+        box-shadow: 5px 5px 14px rgba(0, 0, 0, .1);
+        animation: rotate 3s linear infinite;
+        border-radius: 50%;
+       }
+       .icons img{
+        width: 60px;
+        cursor: pointer;
+        transition: all .5s ease;
+    }
+    .icons{
+        position: absolute;
+        bottom: 60px;
+        margin-left: -30px;
+       
+    } 
+
+   
+}
+@media(max-width:380px){
+    .home-img img{
+      
+        margin-left: 50px;
+        height: auto;
+        box-shadow: 5px 5px 14px rgba(0, 0, 0, .1);
+        animation: rotate 3s linear infinite;
+        border-radius: 50%;
+       }
+       .icons img{
+        width: 50px;
+        cursor: pointer;
+        transition: all .5s ease;
+    }
+   .icons{
+        position: absolute;
+       
+      margin-left: -50px;
+      
+       
+    }  
+
+    .home-text h2,
+   h3{
+    font-size: 20px;
+    color: rgb(233, 54, 54) ;
+    font-weight: 700;
+
+}
+.home-text p{
+    font-size: 14px;
+}
+ .home-text .btn,
+.home-text .btn1{
+    padding: 8px 15px;
+    background:rgb(233, 54, 54) ;
+    color: #000;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition:  .5s ease;
+   
+   
+   
+}
+
+
+}
+
+
